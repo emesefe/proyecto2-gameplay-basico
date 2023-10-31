@@ -28,8 +28,14 @@ public class PlayerController : MonoBehaviour
         // Límite por la izquierda
         if (pos.x < -xRange)
         {
-            Debug.Log("Hola");
             transform.position = new Vector3(-xRange, pos.y, pos.z);
+        }
+        
+        
+        // Límite por la derecha
+        if (pos.x > xRange)
+        {
+            transform.position = new Vector3(xRange, pos.y, pos.z);
         }
         
     }
