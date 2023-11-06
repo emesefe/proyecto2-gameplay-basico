@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2740338556769601815}
   - component: {fileID: 1367450209029657807}
   - component: {fileID: 6554240334201167793}
+  - component: {fileID: 316911900382572840}
   m_Layer: 0
   m_Name: Stag
   m_TagString: Untagged
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57555db6c9934779a26685fb4fd788c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.25
 --- !u!114 &6554240334201167793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +178,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBound: 30
   bottomBound: -10
+--- !u!65 &316911900382572840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276547931381401777}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11620447, y: 0.46239915, z: 0.39267063}
+  m_Center: {x: -0.00062869355, y: 0.2290727, z: 0.047304545}
 --- !u!1 &4440189793517210690
 GameObject:
   m_ObjectHideFlags: 0

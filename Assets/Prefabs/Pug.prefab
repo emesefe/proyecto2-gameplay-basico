@@ -4551,6 +4551,7 @@ GameObject:
   - component: {fileID: 3733374750950904006}
   - component: {fileID: 1996047707689649443}
   - component: {fileID: -2990561963381872748}
+  - component: {fileID: 6020291073894157835}
   m_Layer: 0
   m_Name: Pug
   m_TagString: Untagged
@@ -4658,6 +4659,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBound: 30
   bottomBound: -10
+--- !u!65 &6020291073894157835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290910848027736723}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09022638, y: 0.18776362, z: 0.23757878}
+  m_Center: {x: -0.000025185944, y: 0.09218701, z: 0.03273363}
 --- !u!1 &7367872781179486393
 GameObject:
   m_ObjectHideFlags: 0
