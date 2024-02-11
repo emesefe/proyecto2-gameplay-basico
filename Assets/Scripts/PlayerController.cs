@@ -1,15 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
-
+    private float speed = 10f;
     private float horizontalInput;
-
     private float xRange = 15f;
 
     [SerializeField] private GameObject foodPrefab;
@@ -17,11 +11,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // Movimiento
-        horizontalInput = Input.GetAxis("Horizontal");
-        
-        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
-        
-        PlayerInBounds();
+        Movement();
         
         // Disparo
         if (Input.GetKeyDown(KeyCode.Space))
@@ -29,6 +19,14 @@ public class PlayerController : MonoBehaviour
             ShootFood();
         }
         
+    }
+
+    private void Movement()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
+        
+        PlayerInBounds();
     }
 
     private void PlayerInBounds()

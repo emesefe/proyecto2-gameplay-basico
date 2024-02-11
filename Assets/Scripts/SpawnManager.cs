@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,21 +9,18 @@ public class SpawnManager : MonoBehaviour
     private float spawnRangeX = 15f;
     private float spawnPosZ = 20f;
 
-    [SerializeField] private float startDelay = 2f;
-    [SerializeField] private float spawnInterval = 1.5f;
+    private float startDelay = 2f;
+    private float spawnInterval = 1.5f;
 
     private void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal",
-            startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomAnimal",startDelay, spawnInterval);
     }
 
     private void SpawnRandomAnimal()
     {
         animalIndex = Random.Range(0, animalPrefabsArray.Length);
-        Instantiate(animalPrefabsArray[animalIndex],
-            RandomSpawnPos(), 
-            Quaternion.Euler(0, 180, 0));
+        Instantiate(animalPrefabsArray[animalIndex],RandomSpawnPos(), Quaternion.Euler(0, 180, 0));
     }
 
     private Vector3 RandomSpawnPos()
